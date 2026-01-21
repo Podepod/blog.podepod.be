@@ -1,0 +1,4 @@
+baseURL = 'https://blog.podepod.be/'
+languageCode = 'en-us'
+title = 'Podepod Blog'
+theme = 'archie'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podepod Blog</title>
+    <link>http://65.108.82.132:1313/</link>
+    <description>Recent content on Podepod Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jan 2026 09:34:02 +0000</lastBuildDate>
+    <atom:link href="http://65.108.82.132:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Blog</title>
+      <link>http://65.108.82.132:1313/posts/hello-blog/</link>
+      <pubDate>Wed, 21 Jan 2026 09:34:02 +0000</pubDate>
+      <guid>http://65.108.82.132:1313/posts/hello-blog/</guid>
+      <description>&lt;h2 id=&#34;a-first-blog-post-while-figuring-things-out&#34;&gt;A first blog post, while figuring things out&lt;/h2&gt;&#xA;&lt;p&gt;How does this display the text? I don&amp;rsquo;t know&amp;hellip; How do I deploy this blog? I don&amp;rsquo;t know&amp;hellip; How does Hugo work? I don&amp;rsquo;t know&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;But I want to figure it out and start this.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;I hope it does format it well&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I&amp;rsquo;m going to try a few Hugo themes. I started with the paper theme, but I don&amp;rsquo;t like thos colors and I think it was more then I wanted or needed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
