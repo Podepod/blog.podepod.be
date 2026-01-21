@@ -1,0 +1,9 @@
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "themes/console"]
+	path = themes/console
+	url = https://github.com/mrmierzejewski/hugo-theme-console
+[submodule "themes/archie"]
+	path = themes/archie
+	url = https://github.com/athul/archie
