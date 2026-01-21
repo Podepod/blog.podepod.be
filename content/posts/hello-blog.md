@@ -81,7 +81,7 @@ git remote add origin https://github.com/Podepod/blog.podepod.be.git
 
 When logging in to Github from the terminal I ran into an issue I always run into after not using Github for a while. Logging in with just a username and password does not work anymore. Which is a good thing security wise, but I always have to lookup how authenticating should be done... More of a me problem but still.
 
-
+Figured it out again, and now I can commit and push without any problem.
 
 ### Hosting
 
