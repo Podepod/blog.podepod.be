@@ -18,3 +18,10 @@ echo "theme = '<theme-name>'" >> hugo.toml
 ```bash
 hugo new content content/posts/<post-tittle>.md
 ```
+
+After adding content the git repository should be updated
+
+```bash
+git add *
+git commit -m "<commit message>"
+git push -u origin main
