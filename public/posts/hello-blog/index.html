@@ -20,6 +20,8 @@ Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-01-21T09:34:02+00:00">
     <meta property="article:modified_time" content="2026-01-21T09:34:02+00:00">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Research">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Hello Blog">
@@ -54,6 +56,10 @@ Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo
           <div class="meta">Posted on Jan 21, 2026</div>
         </div>
         
+        <div class="tldr">
+          <strong>tl;dr:</strong>
+          The first post of this blog, written over the span of a few days while I setup the website.
+        </div>
         <section class="body">
           <h2 id="a-first-blog-post-while-figuring-things-out">A first blog post, while figuring things out</h2>
 <p>How does this display the text? I don&rsquo;t know&hellip; How do I deploy this blog? I don&rsquo;t know&hellip; How does Hugo work? I don&rsquo;t know&hellip;</p>
@@ -77,7 +83,7 @@ When no code language is specified it looks like it behaves normally
 </span></span><span style="display:flex;"><span>Write-Host <span style="color:#e6db74">&#34;But the styling is just weird&#34;</span>
 </span></span></code></pre></div><hr>
 <p>I have used the above text as a way of validating the themes I tried. I think for now I will stick with Archie and try to customize it in the future.</p>
-<p>Things I want to try to customize. But I&rsquo;m not sure how flexible the themes are. I like the Archie theme a lot, but have some things I&rsquo;d like to change.
+<p>Things I want to try to customize. But I&rsquo;m not sure how flexible the themes are. I like the <a href="https://github.com/athul/archie">Archie theme</a> a lot, but have some things I&rsquo;d like to change.
 In the future I&rsquo;ll try to figure out how I should go about changing the themes.</p>
 <h3 id="a-todo-list-before-ending-this-post">A todo list before ending this post&hellip;</h3>
 <p>So my current to do&rsquo;s are:</p>
@@ -85,6 +91,8 @@ In the future I&rsquo;ll try to figure out how I should go about changing the th
 <li><input disabled="" type="checkbox"> Figure out how to add pictures to a post</li>
 <li><input disabled="" type="checkbox"> Figuring out how to host the site after I build with Hugo
 <ul>
+<li><input checked="" disabled="" type="checkbox"> Cloudflare pages hosting</li>
+<li><input disabled="" type="checkbox"> Cloudflare pages only custom domain.</li>
 <li><input disabled="" type="checkbox"> When figured out, making it an automated process after I write something, I only have to run one command or even none at all</li>
 </ul>
 </li>
@@ -137,10 +145,36 @@ In the future I&rsquo;ll try to figure out how I should go about changing the th
 <li>API token name: <code>&lt;filled in :)&gt;</code></li>
 </ul>
 <p>After this the build failed&hellip; I think the <code>$CF_PAGES_URL</code> variable is not a standard one or not filled in so I made the variable in the build settings. I also added the custom domain <code>blog.podepod.be</code>. The base URL for hugo now is <code>blog.podepod.be</code>. This seemed to fix the build issue. Only the deploy failed.</p>
+<p>For this issue I found another documentation link on the deploy command: <code>npx wrangler deploy</code>: <a href="https://developers.cloudflare.com/workers/wrangler/commands/#deploy">https://developers.cloudflare.com/workers/wrangler/commands/#deploy</a>. The <code>wrangler deploy</code> command has a parameter <code>PATH</code> which specifies what needs to be deployed. So I tried a new deploy command: <code>npx wrangler deploy public/</code>. This gave a new error. The <code>PATH</code> parameter seemns not to accept a directory, for this I should have used the <code>--assets</code> flag. So this is what I tried: <code>npx wrangler deploy --assets=./public</code>. This again gave a new error message&hellip;</p>
+<p>The new error had to do with the <code>compatibility_date</code> flag of <code>wrangler deploy</code>. I found this documentation page to help me understand what it is: <a href="https://developers.cloudflare.com/workers/configuration/compatibility-dates/">https://developers.cloudflare.com/workers/configuration/compatibility-dates/</a>. It states that the compatibility date should be set to the date of deployment. This can be done by putting it in the wrangler config file (which I do not yet have). But I can also includ it in my deploy command as a flag: <code>npx wrangler deploy --assets=./public --compatibility_date 2026-01-22</code>. Which (again) is what I did. And it worked! The site is now hosted on Cloudflare pages, there are only a few problems with it.</p>
+<ul>
+<li>the styling does not work</li>
+<li>the links, don&rsquo;t work because they prefix <code>blog.podepod.be</code> to the folder structure. This is weird.</li>
+</ul>
+<p>I think this is probably because of some issues with the baseURL and bind IP of hugo.</p>
+<hr>
+<p>Another day later and I&rsquo;m again trying to figure out why the styling on the site isn&rsquo;t working properly&hellip;</p>
+<p>I figured out my <code>$CF_PAGES_URL</code> had a typo in the variable. This seemed to have fixed the weird hyperlinks on the site. But not yet the styling.</p>
+<p>After waiting e few minutes and triggering a new deploy by pushing the changes I made to this post to the git repository, it seems to also have fixed the styling issue. So I can check the hosting part off at my todo list above. The only thing I still want to fix about it is the pages domain is still reachable, I hope to disable this.</p>
+<h4 id="dns">DNS</h4>
+<p>To disable access to the <code>*.pages.dev</code> domain I&rsquo;m again just going to follow the steps of the docs I found earlier. There should only be two steps required, if I read the docs right :)</p>
+<p>The steps in the docs does not work for me, it says I should go to <code>Settings &gt; General</code> and select <code>Enable Access Policy</code> in the Pages project. But this option does not show up for me&hellip;</p>
+<p>I found out I made a big mistake. There is a difference between a Cloudflare workers project and a Cloudflare pages project&hellip; And ofcourse I seemed to have made a worker project instead of the pages project. So I removed the worker and made a Pages project&hellip;</p>
+<p>Here I can see the settings I didn&rsquo;t when I was looking for them in the worker. So I can try to restrict access to the <code>*.pages.dev</code> url</p>
 
         </section>
         <div class="post-tags">
           
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/blog/">blog</a></li>
+              
+              <li><a href="/tags/research/">research</a></li>
+              
+            </ul>
+          </nav>
           
           
         </div>

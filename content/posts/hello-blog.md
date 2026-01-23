@@ -2,6 +2,9 @@
 date = '2026-01-21T09:34:02Z'
 draft = false
 title = 'Hello Blog'
+author = 'Podepod'
+tldr = 'The first post of this blog, written over the span of a few days while I setup the website.'
+tags = ['blog','research']
 +++
 
 ## A first blog post, while figuring things out
@@ -46,7 +49,7 @@ Write-Host "But the styling is just weird"
 
 I have used the above text as a way of validating the themes I tried. I think for now I will stick with Archie and try to customize it in the future.
 
-Things I want to try to customize. But I'm not sure how flexible the themes are. I like the Archie theme a lot, but have some things I'd like to change.
+Things I want to try to customize. But I'm not sure how flexible the themes are. I like the [Archie theme](https://github.com/athul/archie) a lot, but have some things I'd like to change.
 In the future I'll try to figure out how I should go about changing the themes.
 
 ### A todo list before ending this post...
@@ -55,6 +58,8 @@ So my current to do's are:
 
 - [ ] Figure out how to add pictures to a post
 - [ ] Figuring out how to host the site after I build with Hugo
+  - [x] Cloudflare pages hosting
+  - [ ] Cloudflare pages only custom domain.
   - [ ] When figured out, making it an automated process after I write something, I only have to run one command or even none at all
 - [x] Git
   - [x] Add this git repository to my github
@@ -142,3 +147,16 @@ I think this is probably because of some issues with the baseURL and bind IP of 
 Another day later and I'm again trying to figure out why the styling on the site isn't working properly...
 
 I figured out my `$CF_PAGES_URL` had a typo in the variable. This seemed to have fixed the weird hyperlinks on the site. But not yet the styling.
+
+After waiting e few minutes and triggering a new deploy by pushing the changes I made to this post to the git repository, it seems to also have fixed the styling issue. So I can check the hosting part off at my todo list above. The only thing I still want to fix about it is the pages domain is still reachable, I hope to disable this.
+
+#### DNS
+
+To disable access to the `*.pages.dev` domain I'm again just going to follow the steps of the docs I found earlier. There should only be two steps required, if I read the docs right :)
+
+The steps in the docs does not work for me, it says I should go to `Settings > General` and select `Enable Access Policy` in the Pages project. But this option does not show up for me...
+
+
+I found out I made a big mistake. There is a difference between a Cloudflare workers project and a Cloudflare pages project... And ofcourse I seemed to have made a worker project instead of the pages project. So I removed the worker and made a Pages project...
+
+Here I can see the settings I didn't when I was looking for them in the worker. So I can try to restrict access to the `*.pages.dev` url

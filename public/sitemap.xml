@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://65.108.82.132:1313/tags/blog/</loc>
+    <lastmod>2026-01-21T09:34:02+00:00</lastmod>
+  </url><url>
     <loc>http://65.108.82.132:1313/posts/hello-blog/</loc>
     <lastmod>2026-01-21T09:34:02+00:00</lastmod>
   </url><url>
@@ -11,8 +14,12 @@
     <loc>http://65.108.82.132:1313/posts/</loc>
     <lastmod>2026-01-21T09:34:02+00:00</lastmod>
   </url><url>
-    <loc>http://65.108.82.132:1313/categories/</loc>
+    <loc>http://65.108.82.132:1313/tags/research/</loc>
+    <lastmod>2026-01-21T09:34:02+00:00</lastmod>
   </url><url>
     <loc>http://65.108.82.132:1313/tags/</loc>
+    <lastmod>2026-01-21T09:34:02+00:00</lastmod>
+  </url><url>
+    <loc>http://65.108.82.132:1313/categories/</loc>
   </url>
 </urlset>
