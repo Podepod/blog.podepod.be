@@ -5,6 +5,7 @@
 	<meta name="description" content="A first blog post, while figuring things out
 How does this display the text? I don&rsquo;t know&hellip; How do I deploy this blog? I don&rsquo;t know&hellip; How does Hugo work? I don&rsquo;t know&hellip;
 But I want to figure it out and start this.
+Theme
 echo &#34;I hope it does format it well&#34;
 I&rsquo;m going to try a few Hugo themes. I started with the paper theme, but I don&rsquo;t like thos colors and I think it was more then I wanted or needed." />
 	<meta property="og:image" content="http://65.108.82.132:1313/"/>
@@ -13,7 +14,7 @@ I&rsquo;m going to try a few Hugo themes. I started with the paper theme, but I 
   <meta property="og:title" content="Hello Blog">
   <meta property="og:description" content="A first blog post, while figuring things out How does this display the text? I don’t know… How do I deploy this blog? I don’t know… How does Hugo work? I don’t know…
 But I want to figure it out and start this.
-echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo themes. I started with the paper theme, but I don’t like thos colors and I think it was more then I wanted or needed.">
+Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo themes. I started with the paper theme, but I don’t like thos colors and I think it was more then I wanted or needed.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -24,7 +25,7 @@ echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo theme
   <meta name="twitter:title" content="Hello Blog">
   <meta name="twitter:description" content="A first blog post, while figuring things out How does this display the text? I don’t know… How do I deploy this blog? I don’t know… How does Hugo work? I don’t know…
 But I want to figure it out and start this.
-echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo themes. I started with the paper theme, but I don’t like thos colors and I think it was more then I wanted or needed.">
+Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo themes. I started with the paper theme, but I don’t like thos colors and I think it was more then I wanted or needed.">
 
         <link href="http://65.108.82.132:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
 	
@@ -57,6 +58,7 @@ echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo theme
           <h2 id="a-first-blog-post-while-figuring-things-out">A first blog post, while figuring things out</h2>
 <p>How does this display the text? I don&rsquo;t know&hellip; How do I deploy this blog? I don&rsquo;t know&hellip; How does Hugo work? I don&rsquo;t know&hellip;</p>
 <p>But I want to figure it out and start this.</p>
+<h3 id="theme">Theme</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;I hope it does format it well&#34;</span>
 </span></span></code></pre></div><p>I&rsquo;m going to try a few Hugo themes. I started with the paper theme, but I don&rsquo;t like thos colors and I think it was more then I wanted or needed.</p>
 <p>The Console theme was kind of what I am looking for, but the code blocks didn&rsquo;t work as I expected.</p>
@@ -77,6 +79,7 @@ When no code language is specified it looks like it behaves normally
 <p>I have used the above text as a way of validating the themes I tried. I think for now I will stick with Archie and try to customize it in the future.</p>
 <p>Things I want to try to customize. But I&rsquo;m not sure how flexible the themes are. I like the Archie theme a lot, but have some things I&rsquo;d like to change.
 In the future I&rsquo;ll try to figure out how I should go about changing the themes.</p>
+<h3 id="a-todo-list-before-ending-this-post">A todo list before ending this post&hellip;</h3>
 <p>So my current to do&rsquo;s are:</p>
 <ul>
 <li><input disabled="" type="checkbox"> Figure out how to add pictures to a post</li>
@@ -85,10 +88,10 @@ In the future I&rsquo;ll try to figure out how I should go about changing the th
 <li><input disabled="" type="checkbox"> When figured out, making it an automated process after I write something, I only have to run one command or even none at all</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> Git
+<li><input checked="" disabled="" type="checkbox"> Git
 <ul>
-<li><input disabled="" type="checkbox"> Add this git repository to my github</li>
-<li><input disabled="" type="checkbox"> Use git as intented and commit more changes.</li>
+<li><input checked="" disabled="" type="checkbox"> Add this git repository to my github</li>
+<li><input checked="" disabled="" type="checkbox"> Use git as intented and commit more changes.</li>
 </ul>
 </li>
 <li><input disabled="" type="checkbox"> Customization
@@ -101,6 +104,39 @@ In the future I&rsquo;ll try to figure out how I should go about changing the th
 </li>
 </ul>
 <hr>
+<h3 id="git--github">Git / Github</h3>
+<p>At the moment of writing this sentence this folder is initialized with git, but the repository has no remote origin. I want to upload this to my Github account.</p>
+<p>To do this I created a Github repository named <code>blog.podepod.be</code>. With the commands below I added it as a remote origin and pushed the contents of the folder to Github.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;init&#34;</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/Podepod/blog.podepod.be.git
+</span></span></code></pre></div><p>When logging in to Github from the terminal I ran into an issue I always run into after not using Github for a while. Logging in with just a username and password does not work anymore. Which is a good thing security wise, but I always have to lookup how authenticating should be done&hellip; More of a me problem but still.</p>
+<p>Figured it out again, and now I can commit and push without any problem. Using git-credential-oauth it&rsquo;s way easier to login.</p>
+<p>For now this is good enough. The commands I need to use to update my repository are just the default git commands</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add * <span style="color:#75715e"># or a specific file or folder</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;&lt;commit message&gt;&#34;</span>
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><h3 id="hosting">Hosting</h3>
+<p>With Hugo you can run a developments server with the command below. But this is not recommended for a production environment. So I&rsquo;ll need to figure out how to host the static site generated by Hugo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Commands to run the development server</span>
+</span></span><span style="display:flex;"><span>hugo server --bind &lt;server-ip&gt;  --baseURL http://&lt;server-ip&gt; -D
+</span></span></code></pre></div><p>After this, the development server starts and is available on <code>&lt;server-ip&gt;:1313</code></p>
+<p>As far as I can find, after you run the <code>hugo</code> command, the folder <code>./public</code> is generated. This is the full static site. This can be hosted a lot of ways, but the 2 main ones that stick out for me are Github Pages and Cloudflare Pages (under Build &gt; Compute &amp; AI &gt; Workers &amp; Pages)</p>
+<p>I think I want to try and use one of those two options because the project should already be uploaded to GitHub and my DNS is already with Cloudflare.</p>
+<h4 id="cloudflare-pages">Cloudflare Pages</h4>
+<p>I found documentation about Hugo in the cloudflare docs: <a href="https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/">https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/</a> I also found some documentation in the cloudflare docs about adding a custom domain and disabling access to the default pages.dev domain: <a href="https://developers.cloudflare.com/pages/configuration/custom-domains/">https://developers.cloudflare.com/pages/configuration/custom-domains/</a> The Cloudflare documentation looks very usefull and complete :) This should be very usefull when I eventually setup the Cloudflare pages project.</p>
+<hr>
+<p>It&rsquo;s a day later and today I&rsquo;ll try the hosting part of this website. For me the easiest way to host this seems to be to just run a docker container with a simple webserver that only servers the <code>/public/</code> folder generated by Hugo.</p>
+<p>But the easy way isn&rsquo;t always the most fun. So I&rsquo;ll try to host the static site on Cloudflare pages, guided by the docs above.</p>
+<p>I went to the <code>Workers &amp; Pages</code> page and clicked <code>Create Project</code>. I clicked on <code>Connect to GitHub</code>, connected my Github account, gave access to the repository and when I returned to the page the <code>Connect to GitHub</code> button had changed to <code>Continue with GitHub</code>. So that&rsquo;s what I did :)</p>
+<p>After that I needed to select the repository I wanted to use, so I selected the one for this website and went to the <code>Create and deploy</code> part op de process.</p>
+<p>Here I filled in the fields required:</p>
+<ul>
+<li>Project name: <code>blog-podepod-be</code></li>
+<li>Build command: <code>hugo -b $CF_PAGES_URL</code></li>
+<li>API token name: <code>&lt;filled in :)&gt;</code></li>
+</ul>
+<p>After this the build failed&hellip; I think the <code>$CF_PAGES_URL</code> variable is not a standard one or not filled in so I made the variable in the build settings. I also added the custom domain <code>blog.podepod.be</code>. The base URL for hugo now is <code>blog.podepod.be</code>. This seemed to fix the build issue. Only the deploy failed.</p>
 
         </section>
         <div class="post-tags">
