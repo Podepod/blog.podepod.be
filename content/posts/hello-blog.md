@@ -135,4 +135,10 @@ The new error had to do with the `compatibility_date` flag of `wrangler deploy`.
 - the styling does not work
 - the links, don't work because they prefix `blog.podepod.be` to the folder structure. This is weird.
 
-I think this is probably because of some issues with the baseURL and bind IP of hugo.
+I think this is probably because of some issues with the baseURL and bind IP of hugo. 
+
+--- 
+
+Another day later and I'm again trying to figure out why the styling on the site isn't working properly...
+
+I figured out my `$CF_PAGES_URL` had a typo in the variable. This seemed to have fixed the weird hyperlinks on the site. But not yet the styling.
