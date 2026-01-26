@@ -159,4 +159,8 @@ The steps in the docs does not work for me, it says I should go to `Settings > G
 
 I found out I made a big mistake. There is a difference between a Cloudflare workers project and a Cloudflare pages project... And ofcourse I seemed to have made a worker project instead of the pages project. So I removed the worker and made a Pages project...
 
-Here I can see the settings I didn't when I was looking for them in the worker. So I can try to restrict access to the `*.pages.dev` url
+Here I can see the settings I didn't when I was looking for them in the worker. So I can try to restrict access to the `*.pages.dev` url.
+
+---
+
+I think it worked. That's it for this post :)
