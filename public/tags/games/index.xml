@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Games on Podepod Blog</title>
+    <link>http://65.108.82.132:1313/tags/games/</link>
+    <description>Recent content in Games on Podepod Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Podepod</copyright>
+    <lastBuildDate>Tue, 27 Jan 2026 12:13:42 +0000</lastBuildDate>
+    <atom:link href="http://65.108.82.132:1313/tags/games/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting Gameservers for My Friends</title>
+      <link>http://65.108.82.132:1313/posts/hosting-gameservers-for-my-friends/</link>
+      <pubDate>Tue, 27 Jan 2026 12:13:42 +0000</pubDate>
+      <guid>http://65.108.82.132:1313/posts/hosting-gameservers-for-my-friends/</guid>
+      <description>&lt;h2 id=&#34;some-history&#34;&gt;Some History&lt;/h2&gt;&#xA;&lt;p&gt;My interest in tech and IT started with hosting a simple game server for me and my friends to play together. Also an interest in how electronics work. So even now, a few years after I started my IT studies, I am still happily hosting games servers for my friends.&lt;/p&gt;&#xA;&lt;p&gt;I run two basic minecraft survival servers full time for two different groups of friends. These are quite easy to run and more importantly, well documented on how to run them or tweak settings etc. Ofcourse there is also the occasional modded Minecraft server. These servers often come and go as we go through minecraft fases. After that it&amp;rsquo;s fun to go back to a really basic server which is just vanilla minecraft.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

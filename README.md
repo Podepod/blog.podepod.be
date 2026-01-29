@@ -25,3 +25,17 @@ After adding content the git repository should be updated
 git add *
 git commit -m "<commit message>"
 git push -u origin main
+```
+
+## content header
+
+```
++++
+date = '2026-01-21T09:34:02Z'
+draft = false
+title = 'Hello Blog'
+author = 'Podepod'
+tldr = 'The first post of this blog, written over the span of a few days while I setup the website.'
+tags = ['blog','research']
++++
+```

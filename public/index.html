@@ -20,6 +20,7 @@
 
 	
 	<link rel="stylesheet" type="text/css" media="screen" href="http://65.108.82.132:1313/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://65.108.82.132:1313/css/dark.f163b79c6de51d14a766ff9f0563053de7f06a4d1bf7b85a59608bf96e566710.css"  disabled />
 </head>
 
 	<body>
@@ -30,15 +31,79 @@
 	</div>
 	<nav>
 		
+		<a href="/posts">Posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<a href="/about">About</a>
+		
+		<button id="dark-mode-toggle" class="nav-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" type="button"><svg class="feather" viewBox="0 0 24 24" fill="none" stroke="#232333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg></button>
+		<script src="http://65.108.82.132:1313/js/themetoggle.js"></script>
 		
 	</nav>
 </header>
 
 			
 			<main class="list">
-				<div class="site-description"></div>
+				<div class="site-description"><p>A blog about my tech journey I guess</p></div>
 				
 				
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/my-cisco-cheatsheet/">My Cisco Cheatsheet</a></h1>
+					<time>Jan 28, 2026 <span class="draft-label">DRAFT</span> </time>
+					<br><div class="description">
+	
+	<h2 id="cisco-catalyst-switches">Cisco Catalyst Switches</h2>
+<h3 id="analyse">Analyse</h3>
+<p>Terminal Paging</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>term[inal] l[ength] 0           ! Disables terminal paging
+</span></span><span style="display:flex;"><span>term[inal] l[ength] 20          ! Sets the terminal paging to 20 lines
+</span></span></code></pre></div><p>Filter command output</p>
+
+<div class='callout callout-tip' style=''>
+  <div class="callout-inner">
+    
+    🔎 <u>Tip</u>
+    <br />
+    You can use REGEX as a filter instead of plain text
+    
+    </div>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] mac address-table | i[nclude] Gi1/0/2 		! Only include the lines that have &#39;Gi1/0/2&#39; on it
+</span></span><span style="display:flex;"><span>sh[ow] mac address-table | b[egin] Gi1/0/2 			! Start at the first line that has &#39;Gi1/0/2&#39; on it and show every line after that
+</span></span><span style="display:flex;"><span>sh[ow] mac address-table | e[xclude] Gi1/0/2		! Show all output except the lines that have &#39;Gi1/0/2&#39; on it
+</span></span><span style="display:flex;"><span>sh[ow] mac address-table | c[ount] Gi1/0/2 			! Count the amount of lines that have &#39;Gi1/0/2&#39; on it
+</span></span><span style="display:flex;"><span>sh[ow] running-config | s[ection] aaa               ! Only show the AAA section of the running-config
+</span></span></code></pre></div><p>Interface Counters</p>&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/my-cisco-cheatsheet/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/hosting-gameservers-for-my-friends/">Hosting Gameservers for My Friends</a></h1>
+					<time>Jan 27, 2026 <span class="draft-label">DRAFT</span> </time>
+					<br><div class="description">
+	
+	<h2 id="some-history">Some History</h2>
+<p>My interest in tech and IT started with hosting a simple game server for me and my friends to play together. Also an interest in how electronics work. So even now, a few years after I started my IT studies, I am still happily hosting games servers for my friends.</p>
+<p>I run two basic minecraft survival servers full time for two different groups of friends. These are quite easy to run and more importantly, well documented on how to run them or tweak settings etc. Ofcourse there is also the occasional modded Minecraft server. These servers often come and go as we go through minecraft fases. After that it&rsquo;s fun to go back to a really basic server which is just vanilla minecraft.</p>&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/hosting-gameservers-for-my-friends/">Read more ⟶</a>
+				</section>
 				
 				<section class="list-item">
 					<h1 class="title"><a href="/posts/hello-blog/">Hello Blog</a></h1>
@@ -63,8 +128,10 @@
 			<footer>
   <div style="display:flex"></div>
   <div class="footer-info">
-    2026  <a
-      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+    2026  © Podepod | 
+    blog.podepod.be 
+    | Theme: <a href="https://github.com/athul/archie">Archie</a>
+    | Built with: <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>My Cisco Cheatsheet - Podepod Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Cisco Catalyst Switches
+Analyse
+Terminal Paging
+term[inal] l[ength] 0           ! Disables terminal paging
+term[inal] l[ength] 20          ! Sets the terminal paging to 20 lines
+Filter command output
+
+
+  
+    
+    🔎 Tip
+    
+    You can use REGEX as a filter instead of plain text
+    
+    
+
+
+sh[ow] mac address-table | i[nclude] Gi1/0/2 		! Only include the lines that have &#39;Gi1/0/2&#39; on it
+sh[ow] mac address-table | b[egin] Gi1/0/2 			! Start at the first line that has &#39;Gi1/0/2&#39; on it and show every line after that
+sh[ow] mac address-table | e[xclude] Gi1/0/2		! Show all output except the lines that have &#39;Gi1/0/2&#39; on it
+sh[ow] mac address-table | c[ount] Gi1/0/2 			! Count the amount of lines that have &#39;Gi1/0/2&#39; on it
+sh[ow] running-config | s[ection] aaa               ! Only show the AAA section of the running-config
+Interface Counters" />
+	<meta property="og:image" content="http://65.108.82.132:1313/"/>
+	<meta property="og:url" content="http://65.108.82.132:1313/posts/my-cisco-cheatsheet/">
+  <meta property="og:site_name" content="Podepod Blog">
+  <meta property="og:title" content="My Cisco Cheatsheet">
+  <meta property="og:description" content="Cisco Catalyst Switches Analyse Terminal Paging
+term[inal] l[ength] 0 ! Disables terminal paging term[inal] l[ength] 20 ! Sets the terminal paging to 20 lines Filter command output
+🔎 Tip You can use REGEX as a filter instead of plain text sh[ow] mac address-table | i[nclude] Gi1/0/2 ! Only include the lines that have &#39;Gi1/0/2&#39; on it sh[ow] mac address-table | b[egin] Gi1/0/2 ! Start at the first line that has &#39;Gi1/0/2&#39; on it and show every line after that sh[ow] mac address-table | e[xclude] Gi1/0/2	! Show all output except the lines that have &#39;Gi1/0/2&#39; on it sh[ow] mac address-table | c[ount] Gi1/0/2 ! Count the amount of lines that have &#39;Gi1/0/2&#39; on it sh[ow] running-config | s[ection] aaa ! Only show the AAA section of the running-config Interface Counters">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-28T08:11:33+00:00">
+    <meta property="article:modified_time" content="2026-01-28T08:11:33+00:00">
+    <meta property="article:tag" content="Cisco">
+    <meta property="article:tag" content="Research">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="My Cisco Cheatsheet">
+  <meta name="twitter:description" content="Cisco Catalyst Switches Analyse Terminal Paging
+term[inal] l[ength] 0 ! Disables terminal paging term[inal] l[ength] 20 ! Sets the terminal paging to 20 lines Filter command output
+🔎 Tip You can use REGEX as a filter instead of plain text sh[ow] mac address-table | i[nclude] Gi1/0/2 ! Only include the lines that have &#39;Gi1/0/2&#39; on it sh[ow] mac address-table | b[egin] Gi1/0/2 ! Start at the first line that has &#39;Gi1/0/2&#39; on it and show every line after that sh[ow] mac address-table | e[xclude] Gi1/0/2	! Show all output except the lines that have &#39;Gi1/0/2&#39; on it sh[ow] mac address-table | c[ount] Gi1/0/2 ! Count the amount of lines that have &#39;Gi1/0/2&#39; on it sh[ow] running-config | s[ection] aaa ! Only show the AAA section of the running-config Interface Counters">
+
+        <link href="http://65.108.82.132:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://65.108.82.132:1313/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://65.108.82.132:1313/css/dark.f163b79c6de51d14a766ff9f0563053de7f06a4d1bf7b85a59608bf96e566710.css"  disabled />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://65.108.82.132:1313/">Podepod Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/posts">Posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<a href="/about">About</a>
+		
+		<button id="dark-mode-toggle" class="nav-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" type="button"><svg class="feather" viewBox="0 0 24 24" fill="none" stroke="#232333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg></button>
+		<script src="http://65.108.82.132:1313/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">My Cisco Cheatsheet</h1>
+          <div class="meta">
+	    Posted on Jan 28, 2026
+	    
+	     <span class="draft-label">DRAFT</span> 
+	  </div>
+	</div>
+        
+        <div class="tldr">
+          <strong>tl;dr:</strong>
+          My personal cheatsheet of Cisco commands and other Cisco things
+        </div>
+        <section class="body">
+          <h2 id="cisco-catalyst-switches">Cisco Catalyst Switches</h2>
+<h3 id="analyse">Analyse</h3>
+<p>Terminal Paging</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>term[inal] l[ength] 0           ! Disables terminal paging
+</span></span><span style="display:flex;"><span>term[inal] l[ength] 20          ! Sets the terminal paging to 20 lines
+</span></span></code></pre></div><p>Filter command output</p>
+
+<div class='callout callout-tip' style=''>
+  <div class="callout-inner">
+    
+    🔎 <u>Tip</u>
+    <br />
+    You can use REGEX as a filter instead of plain text
+    
+    </div>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] mac address-table | i[nclude] Gi1/0/2 		! Only include the lines that have &#39;Gi1/0/2&#39; on it
+</span></span><span style="display:flex;"><span>sh[ow] mac address-table | b[egin] Gi1/0/2 			! Start at the first line that has &#39;Gi1/0/2&#39; on it and show every line after that
+</span></span><span style="display:flex;"><span>sh[ow] mac address-table | e[xclude] Gi1/0/2		! Show all output except the lines that have &#39;Gi1/0/2&#39; on it
+</span></span><span style="display:flex;"><span>sh[ow] mac address-table | c[ount] Gi1/0/2 			! Count the amount of lines that have &#39;Gi1/0/2&#39; on it
+</span></span><span style="display:flex;"><span>sh[ow] running-config | s[ection] aaa               ! Only show the AAA section of the running-config
+</span></span></code></pre></div><p>Interface Counters</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] int[erface] counters                         ! Show all interface counters
+</span></span><span style="display:flex;"><span>sh[ow] int[erface] counters | i Gi1/0/2             ! Show interface counters for Gi1/0/2
+</span></span><span style="display:flex;"><span>clear counters                                      ! Clear all interface counters
+</span></span><span style="display:flex;"><span>clear counters int Gi1/0/2                          ! Clear interface counters for Gi1/0/2
+</span></span></code></pre></div><h3 id="hardware">Hardware</h3>
+<p>CPU</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] proc[esses] cpu sort[ed]
+</span></span><span style="display:flex;"><span>sh[ow] proc[esses] cpu history
+</span></span></code></pre></div><p>Memory</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] memory sum[mary]
+</span></span><span style="display:flex;"><span>sh[ow] proc[esses] mem[ory] sort[ed]
+</span></span></code></pre></div><p>Temperature</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] env[irnment] temp[erature] status
+</span></span></code></pre></div><p>Power</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] env[ironment] pow[er]                              ! Shows the power supplies of the stack master
+</span></span><span style="display:flex;"><span>sh[ow] env[ironment] pow[er] all                          ! Shows the power supplies of all the stack members
+</span></span><span style="display:flex;"><span>sh[ow] env[ironment] pow[er] switch &lt;stack member nr&gt;     ! Shows the power supplies of a specific stack member
+</span></span></code></pre></div><h3 id="licensing">Licensing</h3>
+<h3 id="poe">PoE</h3>
+<h3 id="sfp">SFP</h3>
+<h3 id="switch-stack">Switch Stack</h3>
+<h3 id="filesystem">Filesystem</h3>
+<h2 id="cisco-catalyst-wireless-controller">Cisco Catalyst Wireless Controller</h2>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/cisco/">cisco</a></li>
+              
+              <li><a href="/tags/research/">research</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2026  © Podepod | 
+    blog.podepod.be 
+    | Theme: <a href="https://github.com/athul/archie">Archie</a>
+    | Built with: <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>

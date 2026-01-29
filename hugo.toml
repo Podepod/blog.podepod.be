@@ -2,3 +2,38 @@ baseURL = 'https://blog.podepod.be/'
 languageCode = 'en-us'
 title = 'Podepod Blog'
 theme = 'archie'
+copyright = '© Podepod'
+
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  publishDate = ["publishDate", "date"]
+  lastmod = ["lastmod", ":git", "date"]
+
+[pagination]
+  pagerSize = 10 # articles per page
+
+[params]
+  mode='toggle'
+  subtitle = "A blog about my tech journey I guess"
+  showReadingTime = true
+
+# navbar
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 1
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3

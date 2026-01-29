@@ -34,6 +34,7 @@ Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo
 
 	
 	<link rel="stylesheet" type="text/css" media="screen" href="http://65.108.82.132:1313/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://65.108.82.132:1313/css/dark.f163b79c6de51d14a766ff9f0563053de7f06a4d1bf7b85a59608bf96e566710.css"  disabled />
 </head>
 <body>
         <div class="content"><header>
@@ -42,6 +43,24 @@ Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo
 	</div>
 	<nav>
 		
+		<a href="/posts">Posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<a href="/about">About</a>
+		
+		<button id="dark-mode-toggle" class="nav-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" type="button"><svg class="feather" viewBox="0 0 24 24" fill="none" stroke="#232333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg></button>
+		<script src="http://65.108.82.132:1313/js/themetoggle.js"></script>
 		
 	</nav>
 </header>
@@ -53,8 +72,12 @@ Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo
       <div class="post-content">
         <div class="title">
           <h1 class="title">Hello Blog</h1>
-          <div class="meta">Posted on Jan 21, 2026</div>
-        </div>
+          <div class="meta">
+	    Posted on Jan 21, 2026
+	    
+	    
+	  </div>
+	</div>
         
         <div class="tldr">
           <strong>tl;dr:</strong>
@@ -70,12 +93,12 @@ Theme echo &#34;I hope it does format it well&#34; I’m going to try a few Hugo
 <p>The Console theme was kind of what I am looking for, but the code blocks didn&rsquo;t work as I expected.</p>
 <p>After this I tried the Void theme but Hugo returned some compiling errors I didn&rsquo;t feel like troubleshooting&hellip;</p>
 <p>As of now I am using the Archie theme.</p>
-<pre tabindex="0"><code>this is A multiline code block
-
-I would like to have it be colored black and be syntax highlighted
-
-When no code language is specified it looks like it behaves normally
-</code></pre><p>do <code>inline codeblocks</code> work as wel? They seem to work.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>this is A multiline code block
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>I would like to have it be colored black and be syntax highlighted
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>When no code language is specified it looks like it behaves normally
+</span></span></code></pre></div><p>do <code>inline codeblocks</code> work as wel? They seem to work.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># When there is a language specified it does some weird styling...</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># I don&#39;t know why it does this</span>
 </span></span><span style="display:flex;"><span>
@@ -160,7 +183,9 @@ In the future I&rsquo;ll try to figure out how I should go about changing the th
 <p>To disable access to the <code>*.pages.dev</code> domain I&rsquo;m again just going to follow the steps of the docs I found earlier. There should only be two steps required, if I read the docs right :)</p>
 <p>The steps in the docs does not work for me, it says I should go to <code>Settings &gt; General</code> and select <code>Enable Access Policy</code> in the Pages project. But this option does not show up for me&hellip;</p>
 <p>I found out I made a big mistake. There is a difference between a Cloudflare workers project and a Cloudflare pages project&hellip; And ofcourse I seemed to have made a worker project instead of the pages project. So I removed the worker and made a Pages project&hellip;</p>
-<p>Here I can see the settings I didn&rsquo;t when I was looking for them in the worker. So I can try to restrict access to the <code>*.pages.dev</code> url</p>
+<p>Here I can see the settings I didn&rsquo;t when I was looking for them in the worker. So I can try to restrict access to the <code>*.pages.dev</code> url.</p>
+<hr>
+<p>I think it worked. That&rsquo;s it for this post :)</p>
 
         </section>
         <div class="post-tags">
@@ -189,8 +214,10 @@ In the future I&rsquo;ll try to figure out how I should go about changing the th
 <footer>
   <div style="display:flex"></div>
   <div class="footer-info">
-    2026  <a
-      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+    2026  © Podepod | 
+    blog.podepod.be 
+    | Theme: <a href="https://github.com/athul/archie">Archie</a>
+    | Built with: <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
 
