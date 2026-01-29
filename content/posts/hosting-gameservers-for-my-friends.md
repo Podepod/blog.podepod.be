@@ -1,6 +1,6 @@
 +++
 date = '2026-01-27T12:13:42Z'
-draft = true
+draft = false
 title = 'Hosting Gameservers for My Friends'
 author = 'Podepod'
 tldr = "Some research I've done to make it easy to host gameservers for my friends"
