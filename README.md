@@ -39,3 +39,12 @@ tldr = 'The first post of this blog, written over the span of a few days while I
 tags = ['blog','research']
 +++
 ```
+
+## TODO
+
+- [ ] Custom Theme maken -> ander git project -> import as module 
+- [ ] make the new_post script (ask for a title, add empty author, tldr and tags field to the frontmatter)
+
+## Images in posts
+
+https://stackoverflow.com/questions/71501256/how-to-insert-an-image-in-my-post-on-hugo

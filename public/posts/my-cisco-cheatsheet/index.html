@@ -147,6 +147,222 @@ term[inal] l[ength] 0 ! Disables terminal paging term[inal] l[ength] 20 ! Sets t
 <h3 id="switch-stack">Switch Stack</h3>
 <h3 id="filesystem">Filesystem</h3>
 <h2 id="cisco-catalyst-wireless-controller">Cisco Catalyst Wireless Controller</h2>
+<h3 id="wlc">WLC</h3>
+<h4 id="health-checks">Health Checks</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show redundancy
+</span></span><span style="display:flex;"><span>show redundancy switchover history
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>show chassis
+</span></span><span style="display:flex;"><span>show chassis rmi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>show processes cpu sorted
+</span></span><span style="display:flex;"><span>show processes cpu history
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>show memory
+</span></span><span style="display:flex;"><span>show processes memory
+</span></span></code></pre></div><h4 id="redunancy">Redunancy</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show redundancy
+</span></span><span style="display:flex;"><span>show redundancy switchover history
+</span></span><span style="display:flex;"><span>show chassis
+</span></span><span style="display:flex;"><span>show chassis rmi
+</span></span></code></pre></div><h4 id="change-primary-node">Change primary node</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>redundancy force-switchover
+</span></span></code></pre></div><h4 id="radio-active-ra-traces">Radio Active (RA) Traces</h4>
+<p>GUI only?</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="exclude-client-mac">Exclude Client MAC</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conf t
+</span></span><span style="display:flex;"><span> [no] wireless exclusionlist &lt;MAC address&gt; &lt;description, max 32 characters&gt;
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h3 id="access-points">Access Points</h3>
+<h4 id="ap-config">AP config</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show ap name &lt;AP name&gt; config general
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="reboot-ap">Reboot AP</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;AP name&gt; reset
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="show-ap-tags">Show AP tags</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;AP name&gt; tag info
+</span></span><span style="display:flex;"><span>ap name &lt;AP name&gt; tag detail
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="change-ap-tags">Change AP tags</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conf[igure] term[inal]
+</span></span><span style="display:flex;"><span> ap &lt;eth mac&gt;
+</span></span><span style="display:flex;"><span>  policy-tag &lt;policy-tag name&gt;
+</span></span><span style="display:flex;"><span>  rf-tag &lt;rf-tag name&gt;
+</span></span><span style="display:flex;"><span>  site-tag &lt;site-tag name&gt;
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="change-ap-primary-controller">Change AP primary controller</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;AP name&gt; controller primary &lt;controller name&gt; &lt;controller IP&gt;
+</span></span><span style="display:flex;"><span>ap name &lt;AP name&gt; reset                                                     ! AP needs to be restarted after changing primary controller
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="change-ap-name">Change AP name</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;current AP name&gt; name &lt;new AP name&gt;
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="ap-led">AP LED</h4>
+<p>CLI</p>
+<p>Show status</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show ap name &lt;AP name&gt; config general | i LED
+</span></span></code></pre></div><p>Change LED Status</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;AP name&gt; [no] led
+</span></span></code></pre></div><p>Flash LED</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;AP name&gt; led flash start duration &lt;seconds 0-3600&gt;
+</span></span><span style="display:flex;"><span>ap name &lt;AP name&gt; led flash stop
+</span></span></code></pre></div><p>Brightness LED</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ap name &lt;AP name&gt; led-brightness-level &lt;level 1-8&gt;
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="show-ap-image">Show AP Image</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show ap name &lt;AP name&gt; image
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="show-ap-cdp-neighbours">Show AP CDP neighbours</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show ap name &lt;AP name&gt; cdp neighbors
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
+<h4 id="rlan">RLAN</h4>
+<p>CLI</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show ap name &lt;AP name&gt; lan port summary
+</span></span></code></pre></div><p>GUI</p>
+
+<div class='callout callout-custom' style='background-color: #ffffd9; border: 3px solid #ffff00;'>
+  <div class="callout-inner">
+    
+    📋 <u>TODO</u>
+    <br />
+    I should still add this part
+    
+    </div>
+</div>
+
 
         </section>
         <div class="post-tags">
