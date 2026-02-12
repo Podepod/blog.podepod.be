@@ -3,7 +3,7 @@ title = 'Scripting as a network engineer'
 author = 'Podepod'
 date = '2026-02-12T09:02:54Z'
 tldr = "Some stuff I've automated and some thoughts on scripting"
-tags = [networking, cisco, thoughts]
+tags = ['networking', 'cisco', 'thoughts']
 toc = false
 draft = false
 +++
