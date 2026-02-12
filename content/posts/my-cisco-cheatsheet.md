@@ -5,6 +5,7 @@ title = 'My Cisco Cheatsheet'
 author = 'Podepod'
 tldr = 'My personal cheatsheet of Cisco commands and other Cisco things'
 tags = ['cisco', 'research', 'networking']
+toc = false
 +++
 
 ## Cisco Catalyst Switches
@@ -151,6 +152,7 @@ end
 
 ### Filesystem
 
+### Macro / script
 
 ## Cisco Catalyst Wireless Controller
 

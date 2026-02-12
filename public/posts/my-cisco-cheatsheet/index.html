@@ -39,6 +39,7 @@ term[inal] l[ength] 0 ! Disables terminal paging term[inal] l[ength] 20 ! Sets t
     <meta property="article:modified_time" content="2026-01-28T08:11:33+00:00">
     <meta property="article:tag" content="Cisco">
     <meta property="article:tag" content="Research">
+    <meta property="article:tag" content="Networking">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="My Cisco Cheatsheet">
@@ -142,10 +143,53 @@ term[inal] l[ength] 0 ! Disables terminal paging term[inal] l[ength] 20 ! Sets t
 </span></span><span style="display:flex;"><span>sh[ow] env[ironment] pow[er] all                          ! Shows the power supplies of all the stack members
 </span></span><span style="display:flex;"><span>sh[ow] env[ironment] pow[er] switch &lt;stack member nr&gt;     ! Shows the power supplies of a specific stack member
 </span></span></code></pre></div><h3 id="licensing">Licensing</h3>
-<h3 id="poe">PoE</h3>
-<h3 id="sfp">SFP</h3>
+<p>Licensing information</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] license all
+</span></span><span style="display:flex;"><span>sh[ow] license sum[mary]
+</span></span></code></pre></div><p>Add switch to smart account</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conf t
+</span></span><span style="display:flex;"><span> ip name-server &lt;dns-server(s)&gt;
+</span></span><span style="display:flex;"><span> call-home
+</span></span><span style="display:flex;"><span>  http resolve-hostname ipv4-first
+</span></span><span style="display:flex;"><span>  contact-email-addr &lt;contact email&gt;
+</span></span><span style="display:flex;"><span>  profile CiscoTAC-1
+</span></span><span style="display:flex;"><span>   active
+</span></span><span style="display:flex;"><span>  exit
+</span></span><span style="display:flex;"><span> exit
+</span></span><span style="display:flex;"><span> ip http client source-interface vlan &lt;management vlan&gt;
+</span></span><span style="display:flex;"><span> no license smart privacy hostname
+</span></span><span style="display:flex;"><span> license smart transport callhome
+</span></span><span style="display:flex;"><span> service call-home
+</span></span><span style="display:flex;"><span>end
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>license smart trust idtoken &lt;token&gt; all force
+</span></span></code></pre></div><p>Change the bootlevel of the switch (to network-advantage with addon dna-advantage)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>configure terminal
+</span></span><span style="display:flex;"><span> license boot level network-advantage addon dna-advantage
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><h3 id="poe">PoE</h3>
+<p>PoE Port status</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh[ow] power inline
+</span></span></code></pre></div><p>PoE port config auto</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conf[igure] term[inal]
+</span></span><span style="display:flex;"><span> int[erface] &lt;interface&gt;
+</span></span><span style="display:flex;"><span>  power inline auto
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>PoE port config static</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conf[igure] term[inal]
+</span></span><span style="display:flex;"><span> int[erface] &lt;interface&gt;
+</span></span><span style="display:flex;"><span>  power inline static
+</span></span><span style="display:flex;"><span>  power inline static max &lt;4000-30000 (milli-watts)&gt;
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><p>Activate PoE High Availability (keeps PoE enabled even when the switch is rebooting, as long as the switch has power)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>conf[igure] term[inal]
+</span></span><span style="display:flex;"><span> int[erface] &lt;interface&gt;
+</span></span><span style="display:flex;"><span>  power inline port perpetual-poe-ha
+</span></span><span style="display:flex;"><span>end
+</span></span></code></pre></div><h3 id="sfp">SFP</h3>
 <h3 id="switch-stack">Switch Stack</h3>
 <h3 id="filesystem">Filesystem</h3>
+<h3 id="macro--script">Macro / script</h3>
 <h2 id="cisco-catalyst-wireless-controller">Cisco Catalyst Wireless Controller</h2>
 <h3 id="wlc">WLC</h3>
 <h4 id="health-checks">Health Checks</h4>
@@ -374,6 +418,8 @@ term[inal] l[ength] 0 ! Disables terminal paging term[inal] l[ength] 20 ! Sets t
               <li><a href="/tags/cisco/">cisco</a></li>
               
               <li><a href="/tags/research/">research</a></li>
+              
+              <li><a href="/tags/networking/">networking</a></li>
               
             </ul>
           </nav>

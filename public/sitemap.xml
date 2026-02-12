@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://65.108.82.132:1313/</loc>
+    <lastmod>2026-02-12T09:02:54+00:00</lastmod>
+  </url><url>
+    <loc>http://65.108.82.132:1313/posts/</loc>
+    <lastmod>2026-02-12T09:02:54+00:00</lastmod>
+  </url><url>
+    <loc>http://65.108.82.132:1313/posts/scripting-as-a-network-engineer/</loc>
+    <lastmod>2026-02-12T09:02:54+00:00</lastmod>
+  </url><url>
     <loc>http://65.108.82.132:1313/tags/cisco/</loc>
     <lastmod>2026-01-28T08:11:33+00:00</lastmod>
   </url><url>
     <loc>http://65.108.82.132:1313/posts/my-cisco-cheatsheet/</loc>
     <lastmod>2026-01-28T08:11:33+00:00</lastmod>
   </url><url>
-    <loc>http://65.108.82.132:1313/</loc>
-    <lastmod>2026-01-28T08:11:33+00:00</lastmod>
-  </url><url>
-    <loc>http://65.108.82.132:1313/posts/</loc>
+    <loc>http://65.108.82.132:1313/tags/networking/</loc>
     <lastmod>2026-01-28T08:11:33+00:00</lastmod>
   </url><url>
     <loc>http://65.108.82.132:1313/tags/research/</loc>

@@ -44,6 +44,7 @@ tags = ['blog','research']
 
 - [ ] Custom Theme maken -> ander git project -> import as module 
 - [ ] make the new_post script (ask for a title, add empty author, tldr and tags field to the frontmatter)
+- [ ] toc (Table of Contents) style aanpassen naar bovenaan de pagina
 
 ## Images in posts
 

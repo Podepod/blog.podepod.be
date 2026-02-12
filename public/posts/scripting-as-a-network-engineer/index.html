@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Scripting as a network engineer - Podepod Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Recently I&rsquo;ve been scripting a lot more. I like to automate things that I have to do more than once every day (or at least most of the days). So most of my scripting is network related which is interesting to figure out. Mostly because I try to keep it within powershell without any downloaded modules. It&rsquo;s fun to just figure out how things work without a module which does it al for you in a single function." />
+	<meta property="og:image" content="http://65.108.82.132:1313/"/>
+	<meta property="og:url" content="http://65.108.82.132:1313/posts/scripting-as-a-network-engineer/">
+  <meta property="og:site_name" content="Podepod Blog">
+  <meta property="og:title" content="Scripting as a network engineer">
+  <meta property="og:description" content="Recently I’ve been scripting a lot more. I like to automate things that I have to do more than once every day (or at least most of the days). So most of my scripting is network related which is interesting to figure out. Mostly because I try to keep it within powershell without any downloaded modules. It’s fun to just figure out how things work without a module which does it al for you in a single function.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-12T09:02:54+00:00">
+    <meta property="article:modified_time" content="2026-02-12T09:02:54+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scripting as a network engineer">
+  <meta name="twitter:description" content="Recently I’ve been scripting a lot more. I like to automate things that I have to do more than once every day (or at least most of the days). So most of my scripting is network related which is interesting to figure out. Mostly because I try to keep it within powershell without any downloaded modules. It’s fun to just figure out how things work without a module which does it al for you in a single function.">
+
+        <link href="http://65.108.82.132:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://65.108.82.132:1313/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://65.108.82.132:1313/css/dark.f163b79c6de51d14a766ff9f0563053de7f06a4d1bf7b85a59608bf96e566710.css"  disabled />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://65.108.82.132:1313/">Podepod Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/posts">Posts</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<a href="/about">About</a>
+		
+		<button id="dark-mode-toggle" class="nav-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" type="button"><svg class="feather" viewBox="0 0 24 24" fill="none" stroke="#232333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg></button>
+		<script src="http://65.108.82.132:1313/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Scripting as a network engineer</h1>
+          <div class="meta">
+	    Posted on Feb 12, 2026
+	    
+	     <span class="draft-label">DRAFT</span> 
+	  </div>
+	</div>
+        
+        <div class="tldr">
+          <strong>tl;dr:</strong>
+          
+        </div>
+        <section class="body">
+          <p>Recently I&rsquo;ve been scripting a lot more. I like to automate things that I have to do more than once every day (or at least most of the days). So most of my scripting is network related which is interesting to figure out. Mostly because I try to keep it within powershell without any downloaded modules. It&rsquo;s fun to just figure out how things work without a module which does it al for you in a single function.</p>
+<p>For example: we would like to automatically update our inventory tool with up to date data about our access switches. We only use Cisco switches and have a Cisco Catalyst Center running. So I can use the API of Catalyst Center to request a lot of data about the switches without having to SSH to each individual switch. We also do this for our wireless access points so we can put these in our inventory system as well.</p>
+<p>Now I just started another script which will take data out of inventory system and use them to generate a custom motd banner on all our access switches. I had already rolled out this banner to all access switches about a year ago but I have to update them manually every time something changes (which isn&rsquo;t a lot so I forget most of the time..). The banner is used to quickly display some useful information about the switch without having to look it up or run commands to find the information.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>                 ___   ___   __  __  ___    _    _  _ __   __
+</span></span><span style="display:flex;"><span>                / __| / _ \ |  \/  || _ \  /_\  | \| |\ \ / /
+</span></span><span style="display:flex;"><span>               | (__ | (_) || |\/| ||  _/ / _ \ | .\ | \ V /
+</span></span><span style="display:flex;"><span>                \___| \___/ |_|  |_||_|  /_/ \_\|_|\_|  |_|
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>=================================================================================
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SWITCH NAME:        &lt;switch name&gt;
+</span></span><span style="display:flex;"><span>MGMT IP:            &lt;mgmt IP&gt;
+</span></span><span style="display:flex;"><span>SOFTWARE VERSION:   &lt;IOS-XE version&gt;
+</span></span><span style="display:flex;"><span>UPS:                &lt;UPS IP&gt;
+</span></span><span style="display:flex;"><span>TYPE:               &lt;switch type&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LOCATION:           &lt;physical location where the datarack is located&gt;
+</span></span><span style="display:flex;"><span>DEPARTMENT:         &lt;involved departments which are impacted by this switch&gt;
+</span></span><span style="display:flex;"><span>TO CONTACT:         &lt;people who should be contacted for update windows etc.&gt;
+</span></span><span style="display:flex;"><span>UPDATE WINDOW:      &lt;previous update window&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>OTHER:              &lt;special warnings for critical switches or just other usefull info&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>=================================================================================
+</span></span></code></pre></div><p>The banner has come in clutch when I wasn&rsquo;t paying too much attention and suddenly realised I was about to reconfigure the wrong trunk port. Sometimes when you have so much ssh sessions open, you&rsquo;re working in the wrong one&hellip;</p>
+<p>Other small, fun and usefull scripts I&rsquo;ve written are:</p>
+<ul>
+<li>A script to format MAC addresses every possible format. It outputs all the formats I&rsquo;ve set up and also copies the given type to the clipboard.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; mac -t dhcp AA:BB:CC:DD:EE:FF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ise       : AA:BB:CC:DD:EE:FF
+</span></span><span style="display:flex;"><span>dhcp_c    : aa-bb-cc-dd-ee-ff
+</span></span><span style="display:flex;"><span>dhcp_u    : AABBCCDDEEFF
+</span></span><span style="display:flex;"><span>cisco     : aabb.ccdd.eeff
+</span></span><span style="display:flex;"><span>windows   : AA:BB:CC:DD:EE:FF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Formatted MAC <span style="color:#f92672">(</span>dhcp<span style="color:#f92672">)</span>: aabbccddeeff
+</span></span></code></pre></div><ul>
+<li>An easy script that&rsquo;s basically a normal ping but with the time printed before every ping. That way I can see how much time has passed when one ping is missed or when the thing I pinged went down or came back up again.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$&gt; tp -t 8.8.8.8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Pinging 8.8.8.8 with <span style="color:#ae81ff">32</span> bytes of data:
+</span></span><span style="display:flex;"><span>✓ 02/12/2026 10:39:07: Reply from 8.8.8.8: time<span style="color:#f92672">=</span>8ms TTL<span style="color:#f92672">=</span><span style="color:#ae81ff">117</span>
+</span></span><span style="display:flex;"><span>✓ 02/12/2026 10:39:08: Reply from 8.8.8.8: time<span style="color:#f92672">=</span>7ms TTL<span style="color:#f92672">=</span><span style="color:#ae81ff">117</span>
+</span></span><span style="display:flex;"><span>✓ 02/12/2026 10:39:09: Reply from 8.8.8.8: time<span style="color:#f92672">=</span>7ms TTL<span style="color:#f92672">=</span><span style="color:#ae81ff">117</span>
+</span></span><span style="display:flex;"><span>✓ 02/12/2026 10:39:10: Reply from 8.8.8.8: time<span style="color:#f92672">=</span>10ms TTL<span style="color:#f92672">=</span><span style="color:#ae81ff">117</span>
+</span></span><span style="display:flex;"><span>✓ 02/12/2026 10:39:11: Reply from 8.8.8.8: time<span style="color:#f92672">=</span>10ms TTL<span style="color:#f92672">=</span><span style="color:#ae81ff">117</span>
+</span></span></code></pre></div><ul>
+<li>A script that generates the md5 hash of a file and verifies it against a given hash</li>
+<li>A script that parses Cisco Catalyst logs by severity level</li>
+</ul>
+<p>Some smaller functions I added to my powershell profile</p>
+<ul>
+<li>A function that generates a psk of a given length and copies it to my clipboard</li>
+<li>A function to disable or enable a given network adapter</li>
+<li>some aliases of the ping command: <code>pt</code> equals <code>ping -t</code>, <code>p4</code> equals <code>ping -4</code>, <code>pc</code> equals <code>ping '$($Get-Clipboard)'</code> etc</li>
+<li>I have a few infrastructure devices that also get a ping alias, so I don&rsquo;t have to know the ip or type the hostname right xD</li>
+<li>a COM-port function which displays the active COM port (<code>Write-Host ([System.IO.Ports.SerialPort]::GetPortNames())</code>) when I try to connect to the console of a device</li>
+<li>a function that keeps my screen active for when I&rsquo;m patching stuff and don&rsquo;t touch my laptop but still need the screen to be on. I know this can also be done with powertoys, but as I said before, I like to figure things out myself :)</li>
+</ul>
+<p>Most of my scripts also have one or more aliases in my powershell profile. I like to use short aliases so I can use the scripts and functions as easy as possible. But this made my Powershell profile quite cluttered. Recently I cleaned it up and split my profile up in two files: the profile file (<code>Microsoft.PowerShell_profile.ps</code>) is the place where all the aliases are defined. The <code>profileFunctions.ps1</code> file is where all the smaller functions are defined and this file gets imported by the profile file.</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2026  © Podepod | 
+    blog.podepod.be 
+    | Theme: <a href="https://github.com/athul/archie">Archie</a>
+    | Built with: <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on Podepod Blog</title>
+    <link>http://65.108.82.132:1313/tags/networking/</link>
+    <description>Recent content in Networking on Podepod Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Podepod</copyright>
+    <lastBuildDate>Wed, 28 Jan 2026 08:11:33 +0000</lastBuildDate>
+    <atom:link href="http://65.108.82.132:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Cisco Cheatsheet</title>
+      <link>http://65.108.82.132:1313/posts/my-cisco-cheatsheet/</link>
+      <pubDate>Wed, 28 Jan 2026 08:11:33 +0000</pubDate>
+      <guid>http://65.108.82.132:1313/posts/my-cisco-cheatsheet/</guid>
+      <description>&lt;h2 id=&#34;cisco-catalyst-switches&#34;&gt;Cisco Catalyst Switches&lt;/h2&gt;&#xA;&lt;h3 id=&#34;analyse&#34;&gt;Analyse&lt;/h3&gt;&#xA;&lt;p&gt;Terminal Paging&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;term[inal] l[ength] 0           ! Disables terminal paging&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;term[inal] l[ength] 20          ! Sets the terminal paging to 20 lines&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Filter command output&lt;/p&gt;&#xA;&#xA;&lt;div class=&#39;callout callout-tip&#39; style=&#39;&#39;&gt;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xA;    &#xA;    🔎 &lt;u&gt;Tip&lt;/u&gt;&#xA;    &lt;br /&gt;&#xA;    You can use REGEX as a filter instead of plain text&#xA;    &#xA;    &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sh[ow] mac address-table | i[nclude] Gi1/0/2 &#x9;&#x9;! Only include the lines that have &amp;#39;Gi1/0/2&amp;#39; on it&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sh[ow] mac address-table | b[egin] Gi1/0/2 &#x9;&#x9;&#x9;! Start at the first line that has &amp;#39;Gi1/0/2&amp;#39; on it and show every line after that&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sh[ow] mac address-table | e[xclude] Gi1/0/2&#x9;&#x9;! Show all output except the lines that have &amp;#39;Gi1/0/2&amp;#39; on it&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sh[ow] mac address-table | c[ount] Gi1/0/2 &#x9;&#x9;&#x9;! Count the amount of lines that have &amp;#39;Gi1/0/2&amp;#39; on it&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sh[ow] running-config | s[ection] aaa               ! Only show the AAA section of the running-config&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Interface Counters&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
