@@ -1,0 +1,3 @@
+.list-item {
+  border-block-end: 3px solid var(--color-primary-dark, #50fa7b)
+}

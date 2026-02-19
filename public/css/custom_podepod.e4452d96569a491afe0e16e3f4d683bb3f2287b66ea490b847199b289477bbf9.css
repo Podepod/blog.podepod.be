@@ -1,0 +1,8 @@
+.list-item {
+	padding-bottom: 1em;
+      	border-block-end: 3px solid var(--color-border, #663399);
+}
+
+.list-item:last-child {
+	border-block-end: none
+}

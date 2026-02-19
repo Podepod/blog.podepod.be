@@ -20,6 +20,7 @@ pygmentscodefencesguesssyntax = true
   mode='toggle'
   subtitle = "A blog about my tech journey I guess"
   showReadingTime = true
+  customcss = ["css/custom_podepod.css"]
 
 # navbar
 

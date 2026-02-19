@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts on Podepod Blog</title>
+    <link>http://65.108.82.132:1313/tags/thoughts/</link>
+    <description>Recent content in Thoughts on Podepod Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Podepod</copyright>
+    <lastBuildDate>Thu, 12 Feb 2026 09:02:54 +0000</lastBuildDate>
+    <atom:link href="http://65.108.82.132:1313/tags/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scripting as a network engineer</title>
+      <link>http://65.108.82.132:1313/posts/scripting-as-a-network-engineer/</link>
+      <pubDate>Thu, 12 Feb 2026 09:02:54 +0000</pubDate>
+      <guid>http://65.108.82.132:1313/posts/scripting-as-a-network-engineer/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve been scripting a lot more. I like to automate things that I have to do more than once every day (or at least most of the days). So most of my scripting is network related which is interesting to figure out. Mostly because I try to keep it within powershell without any downloaded modules. It&amp;rsquo;s fun to just figure out how things work without a module which does it al for you in a single function.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

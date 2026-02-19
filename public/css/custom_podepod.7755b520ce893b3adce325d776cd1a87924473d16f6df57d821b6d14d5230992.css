@@ -1,0 +1,8 @@
+.readmore:hover {
+  border-block-end: 3px solid var(--color-primary-dark, #50fa7b);
+}
+.readmore {
+  width: 100%;
+  display: block;
+  border-block-end: 3px solid grey;
+}

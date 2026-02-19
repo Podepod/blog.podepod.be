@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Podepod</copyright>
-    <lastBuildDate>Wed, 28 Jan 2026 08:11:33 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Feb 2026 09:02:54 +0000</lastBuildDate>
     <atom:link href="http://65.108.82.132:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scripting as a network engineer</title>
+      <link>http://65.108.82.132:1313/posts/scripting-as-a-network-engineer/</link>
+      <pubDate>Thu, 12 Feb 2026 09:02:54 +0000</pubDate>
+      <guid>http://65.108.82.132:1313/posts/scripting-as-a-network-engineer/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve been scripting a lot more. I like to automate things that I have to do more than once every day (or at least most of the days). So most of my scripting is network related which is interesting to figure out. Mostly because I try to keep it within powershell without any downloaded modules. It&amp;rsquo;s fun to just figure out how things work without a module which does it al for you in a single function.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My Cisco Cheatsheet</title>
       <link>http://65.108.82.132:1313/posts/my-cisco-cheatsheet/</link>
